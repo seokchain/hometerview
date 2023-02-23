@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/98997009/220833254-00d319e9-9894-4b3e-831e-e9320f4dee87.png)
+
 # 🏠홈터뷰 ( Home + Interview )
 **🏆SSAFY 2학기 공통 프로젝트 우수상 수상**
 ### ✏️ 1. 프로젝트 소개
