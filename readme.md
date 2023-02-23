@@ -97,6 +97,11 @@
 
 - 녹화
 
+![record](./README.assets/record.gif)
+
+</div>
+</details>
+
 <br>
 
 ### 📜 4. 프로젝트 빌드 및 배포
