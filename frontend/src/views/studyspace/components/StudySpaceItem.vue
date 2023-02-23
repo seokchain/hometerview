@@ -23,9 +23,14 @@
       <h5>
         <span
           class="comName"
-          v-if="studySpace.comName != null || studySpace.comName != ''"
-          >[{{ studySpace.comName }}] </span
-        ><span class="stdName">{{ studySpace.stdName }}</span>
+          v-if="
+            studySpace.comName != null &&
+              studySpace.comName != '' &&
+              studySpace.comName != 'null'
+          "
+          >[{{ studySpace.comName }}]
+        </span>
+        <span class="stdName">{{ studySpace.stdName }}</span>
       </h5>
       <p class="stdDetail">스터디 설명 : {{ studySpace.stdDetail }}</p>
       <div class="slider-btn">

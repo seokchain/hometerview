@@ -1,73 +1,23 @@
-[toc]
+# 🏠홈터뷰 ( Home + Interview )
+**🏆SSAFY 2학기 공통 프로젝트 우수상 수상**
+### ✏️ 1. 프로젝트 소개
 
+- 배경
+  - 비대면 면접 스터디에 대한 수요 증가
+  - 일원화되어 있지 않은 비대면 면접스터디
 
+- 목적
+  - 비대면 스터디를 원하는 유저들에 대한 니즈를 파악하여 기존에 있던 불편함을 해소
 
-# 홈터뷰 : ( Home + Interview )
+- overview
+  - 스터디 모집과 화상회의 서비스를 동시에 제공하여 사용자의 번거로움을 해소
+  - TTS(Text to Speech) 모드를 활용하여 스터디원 모두가 면접자가 되어 모의면접 진행
+  - AI 자세 교정 기능을 통해 면접 준비 과정에서 개인이 신경 쓰기 힘든 자세를 인식하여 교정
+  - 녹화기능, 회고 등록, 캘린더 활용 등을 통한 자가분석 가능
+ 
+ <br>
 
----
-
-![hometerview](/uploads/d098a91d49eff99114119dec755d02bb/hometerview.png)
-
-**SSAFY 2학기 공통 프로젝트**
-
-----
-
-## 결과물 PREVIEW
-
-- 멤버 모집글 페이지
-
-![recruitment](/uploads/dbcf1f0637e34c447a960ff31c39d508/recruitment.gif)
-
-- 스터디 스페이스
-
-![studyspace](/uploads/325cc40cdd0b12628c9bffbdd79a76e4/studyspace.gif)
-
-- Session - 채팅
-
-![chatting](/uploads/1b8174343b97d7b1f04065260b7bc880/chatting.gif)
-
-
-- Session - 면접관 지정
-
-![selectInterview](/uploads/114ff3b05a887828b275af36855cb97e/selectInterview.gif)
-
-- Session - tts mode
-
-![ttsMode](/uploads/a7c63c56947bc085347e3f4831760090/ttsMode.gif)
-
-- 회고
-
-![review](/uploads/852ab73362099b0bdb58a105c728fc9d/review.gif)
-
-- 녹화
-
-![record](/uploads/6bdad5fdb52d83f1ea29b6defe48e72a/record.gif)
-
-## 1. 프로젝트 소개
-
-**프로젝트 명** : 홈터뷰 ( Home + Interview )
-
-**배경**
-
-- 비대면 면접 스터디에 대한 수요 증가
-
-- 일원화되어 있지 않은 비대면 면접스터디
-
-**목적 :** 비대면 스터디를 원하는 유저들에 대한 니즈를 파악하여 기존에 있던 불편함을 해소
-
-**기대효과** :
-
-- 스터디 모집과 화상회의 서비스를 통시에 제공함으로써 사용자의 번거로움을 해소
-
-- 자세 교정 기능을 활용하여 개인이 탐지하기 힘든 부분을 시각적으로 표시
-
-- tts모드를 활용하여 실제 면접 분위기를 연출
-
-- 녹화기능, 회고 등록, 캘린더 활용 등을 통하여 스터디가 끝난 뒤에도 자가분석 가능
-
----
-
-## 2. 기술 스택
+### 🛠 2. 개발 환경 및 기술 스택
 
 **Frontend**
 
@@ -93,124 +43,65 @@
 
 - Querydsl **DB** MySQL : 8.0.29
 
-- Redis **Server** Ubuntu 20.0
+- Redis 
 
-Openvidu, teachabel machine
+**WebRTC**
+- Openvidu
 
----
+**ETC**
+- Google Cloud Text-to-Speech
 
-## 3. 프로젝트 기능
+- Teachable machine
 
-**유저 관리**
+<br>
 
-- 로그인
+### 🧭 3. 주요 기능
+|제목|설명|
+|-----|----------|
+|유저 관리|- 로그인<br>- 회원가입 (이메일 인증, 아이디/비밀번호 중복 및 유효성 검사)<br>- 회원 탈퇴<br>- 아이디 찾기 및 비밀번호 변경<br>- 프로필 사진|
+|스터디 모집글 관리|- 모집글 작성, 조회, 수정, 삭제<br>- 모집글 필터링 (모집 완료/모집 중)<br>- 모집글 검색 (기업명)<br>- 스터디 가입 신청|
+|자기소개서 관리|- 자기소개서 작성, 조회, 수정, 삭제<br>- 개인 예상 질문 작성, 조회, 수정, 삭제|
+|스터디 관리|- 스터디 생성, 정보 조회, 수정, 삭제<br>- 스터디원 공통질문 작성, 조회, 수정, 삭제<br>- 스터디 썸네일 이미지 설정<br>- 스터디원 추방 및 탈퇴|
+|화상 회의|- 채팅<br>- 마이크 on/off<br>- AI 자세 교정 (스터디원이 중앙에 탐지되지 않는 경우 빨강 테두리 표시)<br>- TTS 모드 (면접관 이미지 pop up 및 공통 예상 질문 리스트 출력, 공통 질문 클릭 시 음성 출력)<br>- 면접자 지정 모드 (등록된 면접자 화면 출력, 면접자 자기소개서 조회 및 예상 질문 리스트 출력)<br>- 녹화 기능|
+|면접 관리|- D-day 관리<br>- 캘린더, 회고록 연동<br>- 녹화본 조회|
+|공지사항|- 공지사항 작성, 조회, 수정, 삭제 (관리자 권한)|
 
-- 회원가입
-  
-  - 이메일 인증, 아이디 비밀번호 중복검사 유효성 검사
+<details>
+<summary>결과물 PREVIEW</summary>
+<div markdown="1">       
 
-- 회원탈퇴
+- 멤버 모집글 페이지
 
-- 아이디 찾기 및 비밀번호 변경
+![recruitment](./README.assets/recruitment.gif)
 
-- 프로필 사진
+- 스터디 스페이스
 
-**모집글**
+![studyspace](./README.assets/studyspace.gif)
 
-- 모집글 작성, 조회, 수정, 삭제
+- Session - 채팅
 
-- 모집글 필터링
+![chatting](./README.assets/chatting.gif)
 
-- 모집글 검색
 
-- 모집 신청
+- Session - 면접관 지정
 
-**자기소개서 관리**
+![selectInterview](./README.assets/selectInterview.gif)
 
-- 자기소개서 작성, 조회, 수정, 삭제
+- Session - tts mode
 
-- 개인 질문 작성, 조회, 수정, 삭제
+![ttsMode](./README.assets/ttsMode.gif)
 
-**스터디 관리**
+- 회고
 
-- 스터디 작성, 조회, 수정, 삭제
+![review](./README.assets/review.gif)
 
-- 공통질문 작성, 조회, 수정, 삭제
+- 녹화
 
-- 썸네일 이미지
+<br>
 
-- 스터디 추방, 탈퇴
+### 📜 4. 프로젝트 빌드 및 배포
 
-**세션 페이지**
-
-- 채팅( + 프로필 사진 )
-
-- 마이크,음성 ONOFF, 본인화면 mirror모드
-
-- 자세 분석 ( 자세가 중앙에 있지 않을시 빨강불 테두리 표시)
-
-- tts모드
-  
-  - 영상 레이아웃 변경( 면접관 사진 pop up )
-  
-  - 공통 질문 조회
-  
-  - 말풍선(공통질문) 클릭시 text => 음성 변환
-
-- 면접자 지정 모드
-  
-  - 레이아웃 변경 (지정된 면접자 main화면 )
-  
-  - 등록된 면접자 자기소개서 조회
-  
-  - 면접자 개인 질문 조회
-
-- 일반모드
-
-- 녹화 기능
-
-**나의 면접**
-
-- d-day 표시
-
-- 캘린더, 회고록 연동
-
-- 녹화본 조회
-
-**공지사항**
-
-- 공지사항 작성 조회 수정 삭제
-
-## 4.프로젝트 빌드 및 배포
-
-### 1. 프로젝트 기술 스택
-
-```markdown
-**Frontend**
-Vue3 version
-Vuex 3.4.0
-CSS3
-JavaScript(ES6)
-HTML5
-
-**Backend**
-SpringBoot 2.7.1
-Gradle 7.4.1
-Spring Security
-Spring data JPA
-Querydsl
-Node.js
-express
-
-**DB**
-MySQL : 8.0.29
-Redis
-
-**Server**
-Ubuntu 20.0
-```
-
-### 2. 빌드 설정
+#### 빌드 설정
 
 ```markdown
 **소스코드 클론**
@@ -226,7 +117,7 @@ cd backend
 cd build/libs ssafy-web-project-1.0-SNAPSHOT.jar
 ```
 
- ### 3. AWS EC2 서버 설정
+ #### AWS EC2 서버 설정
 
 모든 설치 전 실행
 
@@ -248,9 +139,9 @@ sudo apt-get install openjdk-8-jdk
 java -version
 javac -version
 
-**자바 환경변수 설정
+**자바 환경변수 설정**
 
-1.** vi 에디터 열기
+1. vi 에디터 열기
 sudo vi /etc/profile
 
 2. 맨 아래 추가 하기
