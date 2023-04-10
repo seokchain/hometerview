@@ -43,7 +43,7 @@
 
 - Spring data JPA
 
-- Querydsl **DB** MySQL : 8.0.29
+- Querydsl DB MySQL : 8.0.29
 
 - Redis 
 
